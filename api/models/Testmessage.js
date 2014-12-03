@@ -29,7 +29,7 @@ module.exports = {
       // 2.check if rtoken xtoken
       // 3.if this is not convient for all router, add it in custom middleware
       console.log("values in is op itself",values);
-
+      uid = 's001';
       sailsTokenAuth.verifyUserAndToken(uid,values.request_token,function(err,result){
         if(result) {
           console.log("success !") ;

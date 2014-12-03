@@ -21,6 +21,26 @@
 
 module.exports.connections = {
 
+  devRedis: {
+    port: 6380,
+    host: 'localhost',
+    adapter: 'sails-redis',
+    ttl: 100,
+    prefix: 'sails:',
+    options: {
+
+      // low-level configuration
+      // (redis driver options)
+
+      parser: 'hiredis',
+      return_buffers: false,
+      detect_buffers: false,
+      socket_nodelay: true,
+      no_ready_check: false,
+      enable_offline_queue: true
+    }
+  },
+
   /***************************************************************************
   *                                                                          *
   * Local disk storage for DEVELOPMENT ONLY                                  *
