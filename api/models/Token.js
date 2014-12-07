@@ -1,6 +1,6 @@
 module.exports = {
 
-  connection: 'devRedis',
+  // connection: 'devRedis',
 
   attributes: {
 

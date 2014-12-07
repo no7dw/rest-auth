@@ -16,6 +16,7 @@ module.exports = {
     },
     empnum:{
       type:"string",
+      protected: true ,
       required:true
 
     }
@@ -25,6 +26,7 @@ module.exports = {
     console.log('before beforeValidate');
     //method 2:
     isOpItself= function(values, cb){
+      return cb();
       // 1.check if the token 与 id 一一对应， 作为身份认证
       // 2.check if rtoken xtoken
       // 3.if this is not convient for all router, add it in custom middleware
